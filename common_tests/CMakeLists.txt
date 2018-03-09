@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(common_tests CXX)
+
+add_subdirectory("${CMAKE_SOURCE_DIR}/common" "${CMAKE_CURRENT_BINARY_DIR}/common")
+
+file(GLOB SOURCES . src/*.cpp)
+
+add_executable(common_tests ${SOURCES}) 
+
+target_include_directories(common_tests PUBLIC "./include")
+
+target_link_libraries(common_tests common)
+

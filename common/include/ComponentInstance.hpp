@@ -1,19 +1,15 @@
-#ifndef COMMON_COMPONENTINSTANCE_
-#define COMMON_COMPONENTINSTANCE_
+#pragma once
+
+#ifndef STRATEGY_GAME_COMPONENT_INSTANCE_HPP_
+#define STRATEGY_GAME_COMPONENT_INSTANCE_HPP_
+
 class IComponentInstance
 {
 	friend class IComponentInstance;
 public:
-	IComponentInstance();
+	virtual ~IComponentInstance() = 0;
 private:
-	
+
 };
 
-class HealthBar : public IComponentInstance
-{
-public:
-	HealthBar();
-private:
-	int health;
-};
-#endif // !_COMMON_COMPONENTINSTANCE_
+#endif // !STRATEGYGAME_COMPONENT_INSTANCE_HPP_

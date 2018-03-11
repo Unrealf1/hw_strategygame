@@ -1,15 +1,20 @@
-#ifndef COMMON_ENTITY_INSTANCE_
-#define COMMON_ENTITY_INSTANCE_
+#pragma once
+
+#ifndef STRATEGY_GAME_ENTITY_INSTANCE_HPP_
+#define STRATEGY_GAME_ENTITY_INSTANCE_HPP_
+
 #include <vector>
 #include <memory>
 #include "ComponentInstance.hpp"
-//#include "EntityType.hpp"
+
 class EntityInstance
 {
 	friend class EntityType;
 public:
-	EntityInstance();
+	~EntityInstance();
 private:
+	EntityInstance();
 	std::vector<std::shared_ptr<IComponentInstance>> component_instances;
 };
-#endif // !COMMON_ENTITY_INSTANCE_
+
+#endif // !STRATEGYGAME_ENTITY_INSTANCE_HPP_

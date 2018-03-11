@@ -5,6 +5,11 @@ EntityType::EntityType()
 
 }
 
+EntityType::~EntityType()
+{
+
+}
+
 std::shared_ptr<EntityInstance> EntityType::Create()
 {
 	std::shared_ptr<EntityInstance> instance(new EntityInstance());

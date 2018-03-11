@@ -10,7 +10,7 @@ EntityType::~EntityType()
 
 }
 
-std::shared_ptr<EntityInstance> EntityType::Create()
+std::shared_ptr<EntityInstance> EntityType::Create() const
 {
 	std::shared_ptr<EntityInstance> instance(new EntityInstance());
 	instance->component_instances.resize(component_types.size());

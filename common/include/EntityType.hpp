@@ -13,9 +13,11 @@ class EntityType
 public:
 	EntityType();
 	~EntityType();
-	std::shared_ptr<EntityInstance> Create();
+	std::shared_ptr<EntityInstance> Create() const;
 private:
 	std::vector<std::shared_ptr<IComponentType>> component_types;
+	EntityType(const EntityType & object) = delete;
+	EntityType & operator=(const EntityType & object) = delete;
 };
 
-#endif // !STRATEGYGAME_ENTITYTYPE_HPP_
+#endif // STRATEGYGAME_ENTITYTYPE_HPP_
